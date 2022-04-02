@@ -13,27 +13,25 @@ namespace ETicaretAPI.API.Controllers
 
         readonly private IProductWriteRepository _productWriteRepository;
         readonly private IProductReadRepository _productReadRepository;
-        public ProductsController(IProductWriteRepository productWriteRepository, IProductReadRepository productReadRepository)
+        readonly private IOrderWriteRepository _orderWriteRepository;
+        readonly private ICustomerWriteRepository _customerWriteRepository;
+        readonly private IOrderReadRepository _orderReadRepository;
+
+        public ProductsController(IProductWriteRepository productWriteRepository, IProductReadRepository productReadRepository, IOrderWriteRepository orderWriteRepository, ICustomerWriteRepository customerWriteRepository, IOrderReadRepository orderReadRepository)
         {
             _productWriteRepository = productWriteRepository;
             _productReadRepository = productReadRepository;
-
+            _orderWriteRepository = orderWriteRepository;
+            _customerWriteRepository = customerWriteRepository;
+            _orderReadRepository = orderReadRepository;
         }
 
         [HttpGet]
         public async Task Get()//DBye urun ekleme methodu
         {
-
-            await _productWriteRepository.AddAsync(new() {Name = "Deneme Product", Price = 1.500F, Stock = 10, CreatedDate = DateTime.UtcNow });
-            await _productWriteRepository.SaveAsync();
-
-        }
-
-        [HttpGet("{id}")]
-        public async Task<IActionResult> Get(string id)//Dbden urun çekme methodu
-        {
-            Product product = await _productReadRepository.GetByIdAsync(id);
-            return Ok(product);
+            Order order = await _orderReadRepository.GetByIdAsync("a7bd183b-59a3-4dbe-aa37-7669e2ba6d55");
+            order.Address = "Istanbul\\Kadikoy";
+            await _orderWriteRepository.SaveAsync();
         }
 
     }

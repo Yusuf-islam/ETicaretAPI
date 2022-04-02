@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ETicaretAPI.Persistence.Migrations
 {
     [DbContext(typeof(ETicaretAPIDbContext))]
-    [Migration("20220323185628_mig_1")]
+    [Migration("20220329183720_mig_1")]
     partial class mig_1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -58,10 +58,7 @@ namespace ETicaretAPI.Persistence.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int>("CustomerID")
-                        .HasColumnType("integer");
-
-                    b.Property<Guid>("CustomerId")
+                    b.Property<Guid>("CustomerID")
                         .HasColumnType("uuid");
 
                     b.Property<string>("Description")
@@ -73,7 +70,7 @@ namespace ETicaretAPI.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CustomerId");
+                    b.HasIndex("CustomerID");
 
                     b.ToTable("Orders");
                 });
@@ -124,7 +121,7 @@ namespace ETicaretAPI.Persistence.Migrations
                 {
                     b.HasOne("ETicaretAPI.Domain.Entities.Customer", "Customer")
                         .WithMany("Orders")
-                        .HasForeignKey("CustomerId")
+                        .HasForeignKey("CustomerID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
