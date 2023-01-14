@@ -1,4 +1,5 @@
 D:\ETicaretUygulamasi\ETicaretAPI\ETicaretAPI\Core\ETicaretAPI.Application\bin\Debug\net6.0\ETicaretAPI.Application.deps.json
+D:\ETicaretUygulamasi\ETicaretAPI\ETicaretAPI\Core\ETicaretAPI.Application\bin\Debug\net6.0\ETicaretAPI.Application.runtimeconfig.json
 D:\ETicaretUygulamasi\ETicaretAPI\ETicaretAPI\Core\ETicaretAPI.Application\bin\Debug\net6.0\ETicaretAPI.Application.dll
 D:\ETicaretUygulamasi\ETicaretAPI\ETicaretAPI\Core\ETicaretAPI.Application\bin\Debug\net6.0\ETicaretAPI.Application.pdb
 D:\ETicaretUygulamasi\ETicaretAPI\ETicaretAPI\Core\ETicaretAPI.Application\bin\Debug\net6.0\ETicaretAPI.Domain.dll
@@ -12,6 +13,5 @@ D:\ETicaretUygulamasi\ETicaretAPI\ETicaretAPI\Core\ETicaretAPI.Application\obj\D
 D:\ETicaretUygulamasi\ETicaretAPI\ETicaretAPI\Core\ETicaretAPI.Application\obj\Debug\net6.0\ETicaretAPI.Application.dll
 D:\ETicaretUygulamasi\ETicaretAPI\ETicaretAPI\Core\ETicaretAPI.Application\obj\Debug\net6.0\refint\ETicaretAPI.Application.dll
 D:\ETicaretUygulamasi\ETicaretAPI\ETicaretAPI\Core\ETicaretAPI.Application\obj\Debug\net6.0\ETicaretAPI.Application.pdb
-D:\ETicaretUygulamasi\ETicaretAPI\ETicaretAPI\Core\ETicaretAPI.Application\obj\Debug\net6.0\ref\ETicaretAPI.Application.dll
-D:\ETicaretUygulamasi\ETicaretAPI\ETicaretAPI\Core\ETicaretAPI.Application\bin\Debug\net6.0\ETicaretAPI.Application.runtimeconfig.json
 D:\ETicaretUygulamasi\ETicaretAPI\ETicaretAPI\Core\ETicaretAPI.Application\obj\Debug\net6.0\ETicaretAPI.Application.genruntimeconfig.cache
+D:\ETicaretUygulamasi\ETicaretAPI\ETicaretAPI\Core\ETicaretAPI.Application\obj\Debug\net6.0\ref\ETicaretAPI.Application.dll

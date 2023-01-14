@@ -26,12 +26,15 @@ namespace ETicaretAPI.Persistence.Context
            var datas =  ChangeTracker.Entries<BaseEntity>();
 
             foreach (var data in datas)
-            {
+            { 
+                #region Switch-Case'in farklı bir yapısı
                 _ = data.State switch//alt-tire kullanımı , burdaki çıktıyı ben bir yere atamayacağım demek oluyor.
                 {
-                    EntityState.Added => data.Entity.CreatedDate=DateTime.UtcNow,
-                     EntityState.Modified => data.Entity.UpdateDate=DateTime.UtcNow 
+                    EntityState.Added => data.Entity.CreatedDate = DateTime.UtcNow,
+                    EntityState.Modified => data.Entity.UpdateDate = DateTime.UtcNow,
+                    EntityState.Unchanged => data.Entity.UpdateDate = data.Entity.UpdateDate//herhangi bir değişiklik olmadığında hata vermemesi için bunu yazdım
                 };
+                #endregion
             }
             return await base.SaveChangesAsync(cancellationToken);
         }
